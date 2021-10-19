@@ -1,249 +1,114 @@
 import React from 'react';
+import 'src/css/index.css'
 
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-const tblInput ={
-    textAlign:'center',
-    border:'2px solid black',
-    width:'95%',
-};
+// handleSubmit(e) {
+//     this.setState({
 
-const tblStyle0 = {
-    textAlign:'center',
-    border:'2px solid black',
-    width:'14%',
-    backgroundColor:'#c6d9f0',
-};
+//     });
+// }
 
-const tblStyle1 = {
-    textAlign:'center',
-    border:'2px solid black',
-    width:'14%',
-    backgroundColor:'#c6d9f0',
-};
-
-const tblStyle2 = {
-    textAlign:'center',
-    border:'2px solid black',
-    width:'10%',
-};
-
-const tblStyle3 = {
-    textAlign:'center',
-    border:'2px solid black',
-    width:'14%',
-    backgroundColor:'#c6d9f0',
-};
-
-const tblStyle4 = {
-    textAlign:'center',
-    border:'2px solid black',
-    width:'10%',
-    color:'red',
-};
-
-const tblStyle5 = {
-    textAlign:'center',
-    border:'2px solid black',
-    width:'12%',
-    backgroundColor:'#c6d9f0',
-};
-
-const tblStyle7 = {
-    textAlign:'center',
-    border:'2px solid black',
-    width:'10%',
-    backgroundColor:'#c6d9f0',
-};
-
-const tblStyleG = {
-    textAlign:'center',
-    border:'4px solid black',
-    width:'100%',
-    borderRadius:'6px',
-};
-
-const h1 = {
-    textAlign:'center',
-    color: 'white',
-    verticalAlign: 'middle',
-};
-
-const h1Container = {
-    height: '70px',
-    width: '100%',
-    borderRadius: '6px',
-    backgroundColor:'#ff0000',
-    display:'flex',
-    alignItems:'center',
-    flexDirection:'row',
-    justifyContent:'center',
-};
-
-const h2 = {
-    textAlign:'center',
-    color: '#003366',
-};
-
-const buttonClass = {
-    fontSize:'15px',
-    fontFamily:'Arial',
-    width:'140px',
-    height:'50px',
-    borderWidth:'1px',
-    color:'#fff',
-    borderColor:'#d02718',
-    fontWeight:'bold',
-    borderTopLeftRadius:'6px',
-    borderTopRightRadius:'6px',
-    borderBottomLeftRadius:'6px',
-    borderBottomRightRadius:'6px',
-    boxShadow:'inset 0px 1px 0px 0px #f5978e',
-    textShadow:'inset 0px 1px 0px #810e05',
-    background:'linear-gradient(#f24537, #c62d1f)',
-    // background: 'linear-gradient(#c62d1f, #f24537)',
-};
-
-const buttonAlign = {
-    display: 'inline-block',
-    marginTop:'15px',
-    marginBottom:'15px',
-    marginLeft:'20px',
-    marginRight:'20px',
-    alignItems:'center',
-    flexDirection:'row',
-    justifyContent:'center',
-};
-
-const buttonAlingOut = {
-    textAlign:'center',
-};
+// arrayExclusion(e) {
+//     this.state.comments.splice(0, 1);
+    
+// }
 
 const Routes = () => (
-<BrowserRouter>
+    <BrowserRouter>
     <Switch>
         <Route exact path="/" component={() => 
             <div>
-                <div class="box" style={h1Container}>
-                    <h1 style={h1}>Consórcio Fancar é a forma ideal, prática e segura para você adquirir seu veículo novo, seminovo e usado.</h1>
+                <div class="box" className="h1Container">
+                    <h1 className="h1">Consórcio Fancar é a forma ideal, prática e segura para você adquirir seu veículo novo, seminovo e usado.</h1>
                 </div>
-                <h2 style={h2}>SIMULADOR DE LANCE CONSÓRCIO FANCAR</h2>
-                <form>
-                    <table style={tblStyleG}>
+                <h2 className="h2">SIMULADOR DE LANCE CONSÓRCIO FANCAR</h2>
+                <form >
+                    <table className="tblStyleG">
                         <tr>
-                            <th style={tblStyle0} colspan="8">PREENCHA SOMENTE OS CAMPOS COM *</th>
+                            <th className="tblStyle1" colspan="8">PREENCHA SOMENTE OS CAMPOS COM *</th>
                         </tr>                        
                         <tr>
-                            <th style={tblStyle1}>CRÉDITO*</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
+                            <th className="tblStyle1">CRÉDITO*</th>
+                            <td className="tblStyle2">
+                                <input type="text" className="tblInput" id="credito"></input>
                             </td>
-                            <th style={tblStyle3}>TAXA DE ADMINISTRAÇÃO*</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
+                            <th className="tblStyle1">TAXA DE ADMINISTRAÇÃO*</th>
+                            <td className="tblStyle2">
+                                <input type="text" className="tblInput" id="taxa"></input>
                             </td>
-                            <th style={tblStyle5}>FUNDO RESERVA*</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
+                            <th className="tblStyle4">FUNDO RESERVA*</th>
+                            <td className="tblStyle2">
+                                <input type="text" className="tblInput" id="fundo"></input>
                             </td>
-                            <th style={tblStyle7}>% DE LANCE*</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
+                            <th className="tblStyle5">% DE LANCE*</th>
+                            <td className="tblStyle2">
+                                <input type="text" className="tblInput" id="pctLance"></input>
                             </td>
                         </tr>
                         <tr>
-                            <th style={tblStyle1}>VALOR TOTAL DE LANCE</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
+                            <th className="tblStyle1">VALOR TOTAL DE LANCE</th>
+                            <td className="tblStyle2">
+                                <input type="text" className="tblInput"></input>
                             </td>
-                            <th style={tblStyle3}>PRAZO ATUAL*</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
+                            <th className="tblStyle1">PRAZO ATUAL*</th>
+                            <td className="tblStyle2">
+                                <input type="text" className="tblInput" id="prazo"></input>
                             </td>
-                            <th style={tblStyle5}>NOVO PLANO</th>
-                            <th style={tblStyle4}>VAL_NPLANO</th>
-                            <th colspan="2" style={tblStyle7}>CREDITO LIBERADO</th>
+                            <th className="tblStyle4">NOVO PLANO</th>
+                            <th className="tblStyle3">VAL_NPLANO</th>
+                            <th colspan="2" className="tblStyle5">CREDITO LIBERADO</th>
                         </tr>
                         <tr>
-                            <th style={tblStyle1}>30% EMBUTIDO</th>
-                            <th style={tblStyle4}>VAL_EMBUTI</th>
-                            <th style={tblStyle3}>PARCELA ATUAL*</th>
-                            <th style={tblStyle4}>VAL_PARCELA</th>
-                            <th style={tblStyle5}>NOVA PARCELA</th>
-                            <th style={tblStyle4}>VAL_PARCELA</th>
-                            <th colspan="2" rowspan="2" style={tblStyle4}>VAL_CREDL</th>
+                            <th className="tblStyle1">30% EMBUTIDO</th>
+                            <th className="tblStyle3">VAL_EMBUTI</th>
+                            <th className="tblStyle1">PARCELA ATUAL*</th>
+                            <td className="tblStyle2">
+                                <input type="text" className="tblInput" id="parcela"></input>
+                            </td>
+                            <th className="tblStyle4">NOVA PARCELA</th>
+                            <th className="tblStyle3">VAL_PARCELA</th>
+                            <th colspan="2" rowspan="2" className="tblStyle3">VAL_CREDL</th>
                         </tr>
                         <tr>
-                            <th style={tblStyle1}>RECURSO A PAGAR</th>
-                            <th style={tblStyle4}>VAL_TLANCE</th>
-                            <th style={tblStyle3}>DESCONTA LANCE? SIM OU NÃO</th>
-                            <th style={tblStyle4}>VAL_DESC</th>
-                            <th style={tblStyle5}>SALDO DEVEDOOR</th>
-                            <th style={tblStyle4}>VAL_SALDO</th>
+                            <th className="tblStyle1">RECURSO A PAGAR</th>
+                            <th className="tblStyle3">VAL_TLANCE</th>
+                            <th className="tblStyle1">DESCONTA LANCE? SIM OU NÃO</th>
+                            <th className="tblStyle3">VAL_DESC</th>
+                            <th className="tblStyle4">SALDO DEVEDOOR</th>
+                            <th className="tblStyle3">VAL_SALDO</th>
                         </tr>
                     </table>
-                    <div style={buttonAlingOut}>
-                    <div style={buttonAlign}>
-                        <button type="submit" style={buttonClass} >Simular Lance</button>
+                    <div className="buttonAlingOut">
+                    <div className="buttonAlign">
+                        <button type="submit" className="buttonClass" id="enviar">Simular Lance</button>
                     </div>
-                    <div style={buttonAlign}>
-                        <button type="button" style={buttonClass} >Limpar dados</button>
+                    <div className="buttonAlign">
+                        <button type="button" className="buttonClass"  id="limpar">Limpar dados</button>
                     </div>
                     </div>
                 </form>
 
+                <h2 className="h2">SIMULADOR PARA NOVO PLANO</h2>
+            
                 <div>
-                <table style={tblStyleG}>
+                <table className="tblStyleG">
                         <tr>
-                            <th style={tblStyle0} colspan="8">PREENCHA SOMENTE OS CAMPOS COM *</th>
-                        </tr>                        
+                            <th className="tblStyle1" colspan="8">ESCOLHA O PLANO OU PARCELA PRETENDIDA</th>
+                        </tr>                       "
                         <tr>
-                            <th style={tblStyle1}>CRÉDITO*</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
-                            </td>
-                            <th style={tblStyle3}>TAXA DE ADMINISTRAÇÃO*</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
-                            </td>
-                            <th style={tblStyle5}>FUNDO RESERVA*</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
-                            </td>
-                            <th style={tblStyle7}>% DE LANCE*</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
-                            </td>
+                            <th className="tblStyle1" rowspan="2">SALDO DEVEDOR</th>
+                            <td className="tblStyle2" rowspan="2"></td>
+                            <th className="tblStyle1">PLANO PRETENDIDO</th>
+                            <td className="tblStyle2"></td>
+                            <th className="tblStyle4">PARCELA PARA O PLANO</th>
+                            <td className="tblStyle2"></td>
                         </tr>
                         <tr>
-                            <th style={tblStyle1}>VALOR TOTAL DE LANCE</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
-                            </td>
-                            <th style={tblStyle3}>PRAZO ATUAL*</th>
-                            <td style={tblStyle2}>
-                                <input type="text" style={tblInput}></input>
-                            </td>
-                            <th style={tblStyle5}>NOVO PLANO</th>
-                            <th style={tblStyle4}>VAL_NPLANO</th>
-                            <th colspan="2" style={tblStyle7}>CREDITO LIBERADO</th>
-                        </tr>
-                        <tr>
-                            <th style={tblStyle1}>30% EMBUTIDO</th>
-                            <th style={tblStyle4}>VAL_EMBUTI</th>
-                            <th style={tblStyle3}>PARCELA ATUAL*</th>
-                            <th style={tblStyle4}>VAL_PARCELA</th>
-                            <th style={tblStyle5}>NOVA PARCELA</th>
-                            <th style={tblStyle4}>VAL_PARCELA</th>
-                            <th colspan="2" rowspan="2" style={tblStyle4}>VAL_CREDL</th>
-                        </tr>
-                        <tr>
-                            <th style={tblStyle1}>RECURSO A PAGAR</th>
-                            <th style={tblStyle4}>VAL_TLANCE</th>
-                            <th style={tblStyle3}>DESCONTA LANCE? SIM OU NÃO</th>
-                            <th style={tblStyle4}>VAL_DESC</th>
-                            <th style={tblStyle5}>SALDO DEVEDOOR</th>
-                            <th style={tblStyle4}>VAL_SALDO</th>
+                            <th className="tblStyle1">PARCELA PRETENDIDA</th>
+                            <td className="tblStyle2"></td>
+                            <th className="tblStyle1">PLANO</th>
+                            <td className="tblStyle2"></td>
                         </tr>
                     </table>
                 </div>
