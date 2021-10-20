@@ -1,4 +1,8 @@
-tblInput {
+import styled from "styled-components";
+
+export const Index = styled.div`
+
+.tblInput {
     text-align:center;
     border:2px solid black;
     width:95%;
@@ -6,7 +10,7 @@ tblInput {
     font-size:25px;
 }
 
-tblStyle1 {
+.tblStyle1 {
     text-align:center;
     border:2px solid black;
     width:14%;
@@ -14,14 +18,14 @@ tblStyle1 {
     background-color:#c6d9f0;
 }
 
-tblStyle2 {
+.tblStyle2 {
     text-align:center;
     border:2px solid black;
     width:10%;
     height:35px;
 }
 
-tblStyle3 {
+.tblStyle3 {
     text-align:center;
     border:2px solid black;
     width:10%;
@@ -29,7 +33,7 @@ tblStyle3 {
     color:red;
 }
 
-tblStyle4 {
+.tblStyle4 {
     text-align:center;
     border:2px solid black;
     width:12%;
@@ -37,7 +41,7 @@ tblStyle4 {
     background-color:#c6d9f0;
 }
 
-tblStyle5 {
+.tblStyle5 {
     text-align:center;
     border:2px solid black;
     width:10%;
@@ -45,20 +49,21 @@ tblStyle5 {
     background-color:#c6d9f0;
 }
 
-tblStyleG {
+.tblStyleG {
+    margin-top:20px;
     text-align:center;
     border:4px solid black;
     width:100%;
     border-radius:6px;
 }
 
-h1 {
+.h1 {
     text-align:center;
     color: white;
     vertical-align: middle;
 }
 
-h1Container {
+.h1Container {
     height: 70px;
     width: 100%;
     border-radius: 6px;
@@ -69,12 +74,12 @@ h1Container {
     justify-content:center;
 }
 
-h2 {
+.h2 {
     text-align:center;
     color: #003366;
 }
 
-buttonClass {
+.buttonClass {
     font-size:15px;
     font-family:Arial;
     width:140px;
@@ -92,14 +97,13 @@ buttonClass {
     background:linear-gradient(#f24537, #c62d1f);
 }
 
-buttonClass:hover {
+.buttonClass:hover {
     background: linear-gradient(#c62d1f, #f24537);
 }
 
-buttonAlign {
+.buttonAlign {
     display: inline-block;
-    margin-top:15px;
-    margin-bottom:15px;
+    margin-top:20px;
     margin-left:20px;
     margin-right:20px;
     align-items:center;
@@ -107,6 +111,7 @@ buttonAlign {
     justify-content:center;
 }
 
-buttonAlingOut {
+.buttonAlingOut {
     text-align:center;
 }
+`;
