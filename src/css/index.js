@@ -64,7 +64,7 @@ export const Index = styled.div`
 }
 
 .h1Container {
-    height: 70px;
+    height: 100px;
     width: 100%;
     border-radius: 6px;
     background-color:#ff0000;
