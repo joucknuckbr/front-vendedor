@@ -49,29 +49,58 @@ export const Index = styled.div`
     background-color:#c6d9f0;
 }
 
-.tblStyleG {
-    margin-top:20px;
-    text-align:center;
-    border:4px solid black;
-    width:100%;
-    border-radius:6px;
+@media screen and (max-width: 500px){
+    .h1 {
+        text-align:center;
+        color: white;
+        vertical-align: middle;
+        font-size: 14px;
+        padding: 3% 5%;
+    }
+    
+    .h1Container {
+        height: 70px;
+        width: 100%;
+        border-radius: 6px;
+        background-color:#ff0000;
+        display:flex;
+        align-items:center;
+    }
+
+    .tblStyleG {
+        margin-top:20px;
+        text-align:center;
+        border:4px solid black;
+        width:100%;
+        border-radius:6px;
+    }
 }
 
-.h1 {
-    text-align:center;
-    color: white;
-    vertical-align: middle;
-}
+@media screen and (min-width: 501px){
+    .h1 {
+        text-align:center;
+        color: white;
+        vertical-align: middle;
+    }
+    
+    .h1Container {
+        height: 100px;
+        width: 100%;
+        border-radius: 6px;
+        background-color:#ff0000;
+        display:flex;
+        align-items:center;
+        flex-direction:row;
+        justify-content:center;
+    }
 
-.h1Container {
-    height: 100px;
-    width: 100%;
-    border-radius: 6px;
-    background-color:#ff0000;
-    display:flex;
-    align-items:center;
-    flex-direction:row;
-    justify-content:center;
+    .tblStyleG {
+        margin-top:20px;
+        text-align:center;
+        border:4px solid black;
+        width:100%;
+        border-radius:6px;
+    }
 }
 
 .h2 {
