@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Index } from "../css/index.js";
+import Container from 'react-bootstrap/Container';
 
 var vSaldoDev = Number();
 
@@ -80,7 +81,7 @@ export default class App extends React.Component {
     }
     
     handleSubmit(event) {
-
+        
         if(!this.state.credito || !this.state.txAdm || !this.state.fundRes || !this.state.pctLance || !this.state.prazoAtual || !this.state.parcAtual){
             if(!this.state.credito){
                 alert("Campo 'crédito' precisa ser preenchido");
@@ -107,7 +108,7 @@ export default class App extends React.Component {
             }
             return;
         }
-
+        
         var vCredito = parseFloat(this.state.credito);
         var vTxAdm = parseFloat(this.state.txAdm.replace(",","."));
         var vFundRes = parseFloat(this.state.fundRes.replace(",","."));
@@ -129,7 +130,7 @@ export default class App extends React.Component {
         }else{
             this.setState({embutido: 0});
         }
-
+        
         if(this.state.descLance.toUpperCase() === 'SIM'){
             if(isNaN(vCredito - (totCred * 0.3))){
                 this.setState({creditoLib: (vCredito - vValTotLance).toFixed(2)});
@@ -152,24 +153,24 @@ export default class App extends React.Component {
         
         event.preventDefault();
     }
-
+    
     handleNovoPlano(event) {
-
+        
         if(isNaN(vSaldoDev / parseInt(this.state.planoPret))){
             this.setState({parcPlano: 0});
         }else{
             this.setState({parcPlano: (vSaldoDev / parseInt(this.state.planoPret)).toFixed(2) });
         }
-
+        
         if(isNaN(vSaldoDev / parseInt(this.state.parcPret))){
             this.setState({plano: 0});
         }else{
             
             let planFix = parseInt(fixe((vSaldoDev / parseFloat(this.state.parcPret)),0));
-
+            
             this.setState({plano: planFix});
         }
-
+        
         event.preventDefault();
     }
     
@@ -188,16 +189,16 @@ export default class App extends React.Component {
         this.setState({recPagar: ''});
         this.setState({descLance: ''});
         this.setState({saldoDev: ''});
-
+        
         event.preventDefault();
     }
-
+    
     handleDeletePlano(event) {
         this.setState({planoPret: ''});
         this.setState({parcPlano: ''});
         this.setState({parcPret: ''});
         this.setState({plano: ''});
-
+        
         event.preventDefault();
     }
     
@@ -337,15 +338,49 @@ export default class App extends React.Component {
                             </tr>
                         </tbody>
                     </table>
+                    
                     <div className="buttonAlingOut">
-                    <div className="buttonAlign">
-                        <button type="button" className="buttonClass" onClick={this.handleNovoPlano}>Novo Plano</button>
-                    </div>
-                    <div className="buttonAlign">
-                        <button type="button" className="buttonClass" onClick={this.handleDeletePlano} >Limpar Dados</button>
-                    </div>
+                        <div className="buttonAlign">
+                            <button type="button" className="buttonClass" onClick={this.handleNovoPlano}>Novo Plano</button>
+                        </div>
+                        <div className="buttonAlign">
+                            <button type="button" className="buttonClass" onClick={this.handleDeletePlano} >Limpar Dados</button>
+                        </div>
                     </div>
                 </div>
+                <Container>
+                    <div className="credito"> teste </div>
+                    <div className="txAdm"> teste </div>
+                    <div className="input1-1"> teste </div>
+                    <div className="input2-1"> teste </div>
+                    <div className="input1-2"> teste </div>
+                    <div className="input1-3"> teste </div>
+                    <div className="input1-4"> teste </div>
+                    <div className="input2-2"> teste </div>
+                    <div className="input2-3"> teste </div>
+                    <div className="input2-4"> teste </div>
+                    <div className="input3-1"> teste </div>
+                    <div className="input3-2"> teste </div>
+                    <div className="input3-3"> teste </div>
+                    <div className="input3-4">
+                        <input type="number" step="0.01" style={{color: 'red', height:'91%'}} className="tblInput" value={this.state.saldoDev} onChange={this.handleChange} id="saldoDev" disabled></input>
+                    </div>
+                    <div className="input4-1"> teste </div>
+                    <div className="input4-2"> teste </div>
+                    <div className="fundRes"> teste </div>
+                    <div className="pctLance"> teste </div>
+                    <div className="valTotLance"> teste </div>
+                    <div className="prazoAtual"> teste </div>
+                    <div className="novoPlano"> teste </div>
+                    <div className="credLib"> teste </div>
+                    <div className="embutido"> teste </div>
+                    <div className="parcAtual"> teste </div>
+                    <div className="novaParc"> teste </div>
+                    <div className="recPagar"> teste </div>
+                    <div className="descLance"> teste </div>
+                    <div className="saldoDev"> teste </div>
+                </Container>
+                
             </div>
         </Index>
         );
