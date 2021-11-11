@@ -301,6 +301,10 @@ export const Index = styled.div`
         display:flex;
         align-items:center;
     }
+
+    .lanceContainer {
+        display:flex;
+    }
     
     .h2 {
         text-align:center;
@@ -313,7 +317,7 @@ export const Index = styled.div`
         border:2px solid black;
         width:95%;
         height:35px;
-        font-size:25px;
+        font-size:18px;
     }
     
     .tblStyle1 {
@@ -397,7 +401,8 @@ export const Index = styled.div`
         width:auto;
         height:auto;
         background-color:#c6d9f0;
-        font-size:2vh;
+        font-size:1.8vh;
+        line-height: 3vh;
     }
     
     .txAdm {
@@ -676,8 +681,8 @@ export const Index = styled.div`
         text-align:center;
         border:2px solid black;
         width:95%;
-        height:35px;
-        font-size:25px;
+        height:85%;
+        font-size:18px;
     }
     
     .tblStyle1 {
